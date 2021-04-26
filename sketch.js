@@ -106,6 +106,23 @@ function draw() {
 
 }
 
+function drawGrid(){
+numCells = 20;
+fillColor = 255;
+
+for (let i = 0; i<= width; i += width / numCells){
+  for (let j = 0; j <= height; j += height / numCells){
+    if (fillColor === 255){
+      fillColor = 200;
+    } else {
+      fillColor = 255;
+    }
+    fill(fillColor);
+    rect(i, j, width / numCells, height / numCells);
+  }
+}
+}
+
 function keyTyped(){
 
   if (key === 's'){
