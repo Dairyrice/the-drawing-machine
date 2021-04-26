@@ -2,6 +2,17 @@ let array = [];
 let noiseOffset = 0.0;
 let strokeWidth = 5;
 let sel;
+let am;
+let sp;
+let fr;
+let ch;
+let vi;
+let jp;
+let kr;
+let ge;
+let ru;
+let po;
+let fi;
 let languages = [{name: "Thank you"},
                   {name: "Gracias"},
                   {name: "Merci"},
@@ -14,7 +25,20 @@ let languages = [{name: "Thank you"},
       {name: "Obrigada"},
     {name: "Salamat"},];
 
+
 function setup() {
+  am = loadImage('assets/flag_1.png');
+  sp = loadImage('assets/flag_2.png');
+  fr = loadImage('assets/flag_3.png');
+  ch = loadImage('assets/flag_4.png');
+  vi = loadImage('assets/flag_5.png');
+  jp = loadImage('assets/flag_6.png');
+  kr = loadImage('assets/flag_7.png');
+  ge = loadImage('assets/flag_8.png');
+  ru = loadImage('assets/flag_9.png');
+  po = loadImage('assets/flag_10.png');
+  fi = loadImage('assets/flag_11.png');
+
   createCanvas(windowWidth, windowHeight);
   textAlign(CENTER);
   sel = createSelect();
@@ -39,47 +63,47 @@ function mySelectEvent(){
 let item = sel.value();
 
 if (item === 'English'){
-  background(255,255,255);
+  background(am);
 text(`${languages[0].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 else if (item === 'Spanish'){
-background(0,255,0);
+background(sp);
 text(`${languages[1].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 else if (item === 'French'){
-  background(0,0,255);
+  background(fr);
 text(`${languages[2].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 else if (item === 'Chinese'){
-  background(255, 51, 51);
+  background(ch);
 text(`${languages[3].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 else if (item === 'Vietnamese'){
-  background(204, 0, 0);
+  background(vi);
 text(`${languages[4].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 else if (item === 'Japanese'){
-  background(255, 179, 179);
+  background(jp);
 text(`${languages[5].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 else if (item === 'Korean'){
-  background(51, 204, 255);
+  background(kr);
 text(`${languages[6].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 else if (item === 'German'){
-  background(255, 255, 0);
+  background(ge);
 text(`${languages[7].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 else if (item === 'Russian'){
-  background(153, 51, 255);
+  background(ru);
 text(`${languages[8].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 else if (item === 'Portuguese'){
-  background(0, 153, 51);
+  background(po);
 text(`${languages[9].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 else if (item === 'Filipino'){
-  background(153, 255, 255);
+  background(fi);
 text(`${languages[10].name}`, mouseX, mouseY, pmouseX, pmouseY);
 }
 
